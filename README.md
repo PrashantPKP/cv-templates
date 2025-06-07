@@ -1,1 +1,1 @@
-# Generated-Templates
+# Templates
