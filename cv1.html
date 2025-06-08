@@ -8,28 +8,29 @@
     <style>
         @media print {
             body {
+            
                 font-family: Arial, sans-serif;
                 margin: 0;
+                line-height: 1.25;
                 padding: 0;
-                background-color: #ffffff !important;
+                background-color: #f1f1f1 !important;
                 display: flex;
                 justify-content: center;
-                align-items: stretch !important;
-                height: 100% !important;
+                align-items: center;
+                height: 1280px;
             }
 
             @page {
-                size: auto 1220px;
+                size: 950px 1300px;
                 margin: 0;
             }
 
             .resume {
+                margin-top: 10px;
                 width: 900px;
-                background: #ffffff;
-                border: 1px solid #ffffff !important;
                 border-radius: 15px;
-                margin-top: 0px !important;
-                padding: 0 32px 0 0;
+                border: 0px solid #ddd !important;
+                padding: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
         }
@@ -37,148 +38,103 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            margin-top:100px;
+            margin-bottom: 100px;
+            line-height: 1.25;
             padding: 0;
             background-color: #d6cece;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 1380px;
-            /* (W/H) Ratio should be 0.7069 */
+            height: 1280px;
         }
 
         .resume {
-            width: 900px;
-            /* (W/H) Ratio should be 0.7069 */
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            margin-top: 100px;
-            padding: 0 30px 0 0;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .Underline {
-            width: 75px;
-            border: 2px solid black;
             margin-top: 10px;
-            border-radius: 20px;
-        }
-
-        .NoneDecoration a {
-            text-decoration: none;
-            color: #0363b1;
+            width: 900px;
+            background: #f1f1f1;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
-            display: flex;
-            align-items: center;
+            text-align: center;
+            border-top: 2px solid #353333;
+            padding: 80px 0px 80px 0px;
+            margin: 0px 40px 0px 40px;
+            background-repeat: no-repeat;
+            background-size: 250px;
+            background-position: center;
+            margin-top: 10px;
         }
 
-        .header .left {
-            width: 35%;
-            display: flex;
-            justify-content: center;
-            padding: 10px 13px 10px 13px;
-            background-color: #0363b1;
-            border-top-left-radius: 15px;
-            border-right: 4px solid #0363b1;
-        }
-
-        .left img {
-            width: 200px;
-            height: 200px;
-            background-color: #4c4fda;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .header .right {
-            width: 65%;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            margin-right: 40px;
-        }
-
-        .header .right .head {
-            padding-left: 40px;
-        }
-
-        .textGray {
-            color: #4e4e53;
-        }
-
-        .right h1 {
+        .header h1 {
+            margin: 0;
             font-size: 40px;
-            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4e4c4c;
         }
 
-        .right h2 {
-            font-size: 16px;
-            color: #4d4b4b;
-        }
-
-        .section-title {
+        .header h2 {
+            margin: 5px 0 0;
             font-size: 18px;
-            color: #3e3e3f;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #96a75a;
-            padding-bottom: 5px;
+            font-weight: bold;
+            color: #555;
         }
 
-        .SkillsSection-title {
-            font-size: 18px;
-            color: #3e3e3f;
-            border-bottom: 1px solid #96a75a;
+        .SUsection {
+            padding-top: 10px;
+            padding-left: 8px;
         }
 
-        .Lsection-title {
-            font-size: 18px;
-            color: #f5f5f5;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #d4d4d2;
-            padding-bottom: 5px;
-        }
-
-        .content {
-            display: flex;
-            justify-content: center;
-        }
-
-        .mtt-3 {
-            margin-top: 0.75rem
-                /* 12px */
-            ;
+        .section,
+        .SUsection {
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
         }
 
         .content .left {
-            width: 35%;
-            padding-right: 10px;
-            background-color: #0363b1;
-            border-bottom-left-radius: 15px;
-            border-right: 4px solid #0363b1;
-            /* border-top: 4px solid #0363b1; */
+            margin-top: 20px;
         }
 
-        .content .right {
-            width: 65%;
-            margin-left: 10px;
-        }
-
-        .Lsection,
-        .Contact {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            color: #e1ebf3;
+        .rotate-90 {
+            transform: rotate(90deg);
         }
 
         .Contact div {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            margin-left: 8px;
         }
 
-        .content .Contact div a {
+        .Contact {
+            width: 33%;
+        }
+
+        .Contact,
+        .Usection {
+            padding-top: 20px;
+        }
+
+        .NoneDecorationBlack a {
             text-decoration: none;
-            color: #e1ebf3;
+            color: #000000;
+        }
+
+        .colorBlue {
+            color: #277ca3;
+        }
+
+        .TextLight {
+            /* Used for subheadings of the content & contact fasfonts to make it more classic */
+            color: #333333;
+        }
+
+        .NoneDecoration a {
+            /* Used in More Certificates to remove text decoration but add blue color to make it Easy to understand */
+            text-decoration: none;
+            color: #277ca3;
         }
 
         .subcont,
@@ -187,30 +143,81 @@
             justify-content: space-between;
         }
 
-        .section,
-        .SUsection {
-            margin-bottom: 20px;
-            color: #141414;
+        .section-title {
+            font-size: 18px;
+            color: #5e6163;
+            padding: 0 10px 0 10px;
+            margin-bottom: 10px;
         }
 
-        .item {
+        .section {
+            padding-left: 8px;
+        }
+
+        .LDsection {
+            padding-left: 8px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #353333;
+            margin: 0 20px 0 20px;
+        }
+
+        .upperContent {
+            display: flex;
+            justify-content: center;
+            margin: 0 20px 0 20px;
+            border-top: 2px solid #353333;
+            border-bottom: 2px solid #353333;
+        }
+
+        .upperContent .Usection {
+            border-left: 4px solid #5e6163;
+            width: 67%;
+        }
+
+        .content .left {
+            width: 33%;
+            height: 100%;
+            border-radius: 2px;
+        }
+
+        .section-title,
+        .content .right .item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .right {
+            width: 67%;
+            height: 100%;
+            border-left: 4px solid rgb(109, 106, 106);
+        }
+
+        .Litem {
             margin-bottom: 10px;
+            padding-right: 20px;
+        }
+
+        .Ritem {
+            margin-bottom: 10px;
+            padding-left: 10px;
         }
 
         .item-title {
             font-weight: bold;
         }
 
-        .content .right .item-title,
-        .content .left .section-title,
-        .Lsection-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .fontLight {
+            /* font-weight: bold; */
+            color: #5f5f5f;
         }
 
         ul {
-            list-style-type: circle;
+            list-style: circle;
             padding-left: 20px;
             margin: 5px 0;
         }
@@ -218,177 +225,140 @@
         ul li {
             margin-bottom: 5px;
         }
-
-        .textLight {
-            font-weight: 500;
-            color: #626263;
-        }
-
-        .rotate-90 {
-            transform: rotate(90deg);
-        }
-
-        .content .right .section .Cont {
-            border-left: 2px solid #53677a;
-            margin-left: 5px;
-        }
-
-        .content .right .section .Cont .item {
-            margin-left: 10px;
-        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="#">
 </head>
 
 <body>
-  <div class="sc-dycHyt fNOEuN">
-    <div class="resume" id="capture-content">
-      <div class="header">
-        <div class="left">
-          <img src="https://www.skibalawchicago.com/wp-content/uploads/2024/06/profile-placeholder.jpg" alt="Profile">
-        </div>
-        <div class="right">
-          <div class="head">
-            <h1>Nishant Sonar</h1>
-            <h2>Full Stack Web Developer</h2>
-            <div class="Underline"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content">
-        <div class="left">
-          <div class="Contact">
-            <div class="Lsection-title"><b>Contact</b> <i class="fas fa-address-card"></i></div><br>
-            <div class="Litem"><i class="fa fa-phone"></i> 9970135444</div>
-            <div class="Litem"><i class="fas fa-envelope"></i><a href="mailto:nishantsonar047@gmail.com"> nishantsonar047@gmail.com</a></div>
-            <div class="Litem"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/NishatSonar/" target="_blank"> NishantSonar</a></div>
-            <div class="Litem"><i class="fas fa-globe"></i><a href="https://nishanttech.host20.uk" target="_blank"> nishanttech.host20.uk </a></div>
-            <div class="Litem"><i class="fa fa-map-marker"></i> Nagpur (Maharashtra)</div>
-          </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Education </b><i class="fas fa-graduation-cap"></i></div><br>
-            <div class="Litem">
-              <div class="SubSec-title"><b>2021 - 2025<br>Nagpur University</b></div>Bachelor in Technology <br>CGPA: 8.5<br><br>
-              <div class="SubSec-title"><b>2020 - 2021<br>MPK Jr.College Nagpur</b></div>Primary/Secondary <br>Percentage: 84.33<br>
+    <div class="sc-gjcoXW iFSzMt">
+        <div class="resume" id="capture-content">
+            <div class="header">
+                <h1>Prashant Parshuramkar</h1>
+                <h2>Frontend Developer</h2>
             </div>
-          </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Soft Skills </b><i class="fa fa-book"></i></div><br>
-            <ul>
-              <li>Team Collaboration</li>
-              <li>Problem Solving</li>
-              <li>Adaptability</li>
-              <li>Critical Thinking</li>
-              <li>Effective Communication</li>
-              <li>Time Management</li>
-            </ul>
-          </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Languages </b><i class="fa fa-language"></i></div><br>
-            <ul>
-              <li>English: Fluent</li>
-              <li>Hindi: Fluent</li>
-              <li>Marathi: Fluent</li>
-            </ul>
-          </div>
+            <div class="upperContent">
+                <div class="Contact">
+                    <div class="section-title"><b>Contact</b> <i class="fas fa-address-card" aria-hidden="true"></i></div>
+                    <div class="Litem"><i class="fa fa-phone TextLight" aria-hidden="true"></i> 9623447749</div>
+                    <div class="Litem NoneDecorationBlack"><i class="fas fa-envelope TextLight" aria-hidden="true"></i> <a href="mailto:pprashant0654@gmail.com">pprashant0654@gmail.com</a></div>
+                    <div class="Litem NoneDecorationBlack"><i class="fab fa-linkedin TextLight" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/prashantparshuramkar9623" target="_blank" rel="noreferrer">prashantparshuramkar9623</a></div>
+                    <div class="Litem NoneDecorationBlack"><i class="fas fa-globe TextLight" aria-hidden="true"></i> <a href="https://prashant.host20.uk" target="_blank" rel="noreferrer">https://prashant.host20.uk</a></div>
+                    <div class="Litem"><i class="fa fa-map-marker TextLight" aria-hidden="true"></i> Nagpur (Maharashtra)</div><br>
+                </div>
+                <div class="Usection">
+                    <div class="section-title"><b>Profile Summary</b></div>
+                    <div class="Litem">
+                        <p class="Ritem">Creative and detail-oriented Frontend Developer skilled in crafting responsive, high-performance user interfaces using modern frameworks like React, JavaScript, and CSS. Experienced in building and deploying scalable web apps, with strong focus on usability and cross-browser compatibility. Passionate about improving user experience and bringing intuitive designs to life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="SUsection">
+                        <div class="section-title"><b>Education </b><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                        <div>
+                            <div class="TextLight"><b>2021 - 2025<br>Nagpur University</b></div>Bachelor in Computer Application <br>CGPA: 8.5<br> <br>
+                        </div>
+                        <div>
+                            <div class="TextLight"><b>2020 - 2021<br>MPK Jr.College Sakoli</b></div>Primary/Secondary <br>Percentage: 84.33 <br> <br>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title"><b>Soft Skills </b><i class="fa fa-book" aria-hidden="true"></i></div>
+                        <ul>
+                            <li>Teamwork</li>
+                            <li>Problem-Solving</li>
+                            <li>Leadership</li>
+                            <li>Critical Thinking</li>
+                            <li>Communication</li>
+                            <li>Creativity</li><br>
+                        </ul>
+                    </div>
+                    <div class="LDsection">
+                        <div class="section-title"><b>Languages </b><i class="fa fa-language" aria-hidden="true"></i></div>
+                        <ul>
+                            <li>English: Fluent</li>
+                            <li>Hindi: Fluent</li>
+                            <li>French: Fluent</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="SUsection">
+                        <div class="section-title"><b>Projects</b></div>
+                        <ul>
+                            <div class="Ritem">
+                                <li>
+                                    <div class="item-title TextLight">Resume Builder App</div>
+                                    <div>React, Tailwind CSS, JavaScript – Created an ATS-friendly resume builder with real-time preview and export to PDF.</div>
+                                </li>
+                            </div>
+                            <div class="Ritem">
+                                <li>
+                                    <div class="item-title TextLight">N-Queen Puzzle Visualizer</div>
+                                    <div>JavaScript, HTML/CSS – Animated algorithm visualizer that demonstrates N-Queen solutions with speed control.</div>
+                                </li>
+                            </div>
+                            <div class="Ritem">
+                                <li>
+                                    <div class="item-title TextLight">Task Manager App</div>
+                                    <div>HTML, CSS, JavaScript – A personal task management tool with persistent local storage and deadline reminders.</div>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="section-title"><b>Work Experience</b></div>
+                        <div class="Ritem">
+                            <ul>
+                                <li>
+                                    <div class="item-title TextLight">CodeStudio Inc.<div>Jan-2025 to Apr-2025</div>
+                                    </div>(Frontend Developer Intern) <br>Built reusable UI components in React and improved website performance by 30%.<br><br>
+                                </li>
+                                <li>
+                                    <div class="item-title TextLight">WebCraft Labs<div>Aug-2024 to Nov-2024</div>
+                                    </div>(UI Developer) <br>Collaborated with design teams to convert Figma mockups into responsive layouts using Flexbox and Grid.<br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title"><b>Certificates</b></div>
+                        <div class="Ritem subcont NoneDecoration">
+                            <div>Frontend Developer Bootcamp<br>React Essentials<br>JavaScript Advanced Concepts<br>Web Accessibility Basics<br>Git & GitHub Mastery<br><a href="#" target="_blank" rel="noreferrer">More Certificates</a></div>
+                            <div>--<br>--<br>--<br>--<br>--<br></div>
+                            <div>Udemy<br>Coursera<br>FreeCodeCamp<br>Google UX<br>GitHub Campus<br></div>
+                            <div class="fontLight">(2 Month)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br>(2 Weeks)<br></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <div class="section-title"><b>Technical Skills</b></div>
+                        <div class="Ritem subcont">
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <ul>
+                                <li>React</li>
+                                <li>Tailwind CSS</li>
+                                <li>Redux</li>
+                            </ul>
+                            <ul>
+                                <li>Git/GitHub</li>
+                                <li>REST APIs</li>
+                            </ul>
+                            <ul>
+                                <li>VS Code</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="right">
-          <div class="section">
-            <div class="section-title"><b>Profile Summary</b></div>
-            <p>Self-motivated Full Stack Web Developer skilled in creating scalable applications using React, Node.js, Express.js, and MongoDB. Passionate about clean code, API integration, and responsive UI. Hands-on with live projects, RESTful APIs, and authentication systems. Always ready to learn and adapt in fast-paced environments.</p>
-          </div>
-
-          <div class="SUsection">
-            <div class="section-title"><b>Projects</b></div>
-            <ul>
-              <div class="Ritem" style="margin-bottom: 15px;">
-                <li>
-                  <div class="item-title textGray">Task Management System</div>
-                  <div>React, Node.js, MongoDB – Developed a full-stack task management app with user authentication and REST APIs.</div>
-                </li>
-              </div>
-              <div class="Ritem" style="margin-bottom: 15px;">
-                <li>
-                  <div class="item-title textGray">Student Management App</div>
-                  <div>Ionic Angular – Built a CRUD-based app to manage student records with real-time updates and API integration.</div>
-                </li>
-              </div>
-              <div class="Ritem">
-                <li>
-                  <div class="item-title textGray">Super Cop Application</div>
-                  <div>Ionic + REST APIs – Android/web app for FIR, case handling, and duty management for citizens and police officers.</div>
-                </li>
-              </div>
-            </ul>
-          </div><br>
-
-          <div class="section">
-            <div class="section-title"><b>Work Experience</b></div>
-            <div class="Ritem">
-              <ul>
-                <li>
-                  <div class="item-title textGray mtt-3">Onlei Tech<div>Dec-2024 to Mar-2025</div></div>
-                  Full Stack Developer Intern<br>
-                  <div>Developed and deployed full-stack applications using React, Node.js, and MongoDB. Worked on REST APIs and authentication logic.</div>
-                </li>
-                <li>
-                  <div class="item-title textGray mtt-3">Live Project Contributor<div>Aug-2024 to Dec-2024</div></div>
-                  Frontend Developer<br>
-                  <div>Worked on the frontend of a real-time Police Patrol app. Integrated APIs and improved responsiveness using Ionic Angular.</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title"><b>Certificates</b></div>
-            <div class="Ritem subcont NoneDecoration">
-              <div>
-                Best Coder - Technophilia<br>Frontend Development with React<br>MongoDB Basics<br>REST API Integration<br>Git & GitHub Essentials<br><a href="#">More Certificates</a>
-              </div>
-              <div>--<br>--<br>--<br>--<br>--</div>
-              <div>
-                Championship (2022)<br>Coursera<br>MongoDB University<br>Udemy<br>GitHub Campus
-              </div>
-              <div class="textLight">(Winner)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br>(2 Weeks)</div>
-            </div>
-          </div>
-
-          <div class="skills">
-            <div class="SkillsSection-title"><b>Technical Skills</b></div><br>
-            <div class="Ritem subcont">
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-              </ul>
-              <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-              </ul>
-              <ul>
-                <li>MongoDB</li>
-                <li>Ionic Angular</li>
-                <li>REST APIs</li>
-              </ul>
-              <ul>
-                <li>Git/GitHub</li>
-                <li>VS Code</li>
-                <li>Responsive Design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </body>
 
 </html>
