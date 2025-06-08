@@ -1,394 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATS Friendly Resume</title>
     <style>
-        @media print {
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #ffffff !important;
-                display: flex;
-                justify-content: center;
-                align-items: stretch !important;
-                height: 100% !important;
-            }
-
-            @page {
-                size: auto 1220px;
-                margin: 0;
-            }
-
-            .resume {
-                width: 900px;
-                background: #ffffff;
-                border: 1px solid #ffffff !important;
-                border-radius: 15px;
-                margin-top: 0px !important;
-                padding: 0 32px 0 0;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+      @media print {
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          line-height: 1.25;
+          padding: 0;
+          background-color: #f1f1f1 !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 1280px;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #d6cece;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 1380px;
-            /* (W/H) Ratio should be 0.7069 */
+        @page {
+          size: 950px 1300px;
+          margin: 0;
         }
 
         .resume {
-            width: 900px;
-            /* (W/H) Ratio should be 0.7069 */
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            margin-top: 100px;
-            padding: 0 30px 0 0;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          margin-top: 10px;
+          width: 900px;
+          border-radius: 15px;
+          border: 0px solid #ddd !important;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+      }
 
-        .Underline {
-            width: 75px;
-            border: 2px solid black;
-            margin-top: 10px;
-            border-radius: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        line-height: 1.25;
+        padding: 0;
+        background-color: #d6cece;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1280px;
+      }
 
-        .NoneDecoration a {
-            text-decoration: none;
-            color: #0363b1;
-        }
+      .resume {
+        margin-top: 10px;
+        width: 900px;
+        background: #f1f1f1;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .header {
-            display: flex;
-            align-items: center;
-        }
+      .header {
+        text-align: center;
+        border-top: 2px solid #353333;
+        padding: 80px 0px 80px 0px;
+        margin: 0px 40px 0px 40px;
+        background-repeat: no-repeat;
+        background-size: 250px;
+        background-position: center;
+        margin-top: 10px;
+      }
 
-        .header .left {
-            width: 35%;
-            display: flex;
-            justify-content: center;
-            padding: 10px 13px 10px 13px;
-            background-color: #0363b1;
-            border-top-left-radius: 15px;
-            border-right: 4px solid #0363b1;
-        }
+      .header h1 {
+        margin: 0;
+        font-size: 40px;
+        font-weight: bold;
+        color: #4e4c4c;
+      }
 
-        .left img {
-            width: 200px;
-            height: 200px;
-            background-color: #4c4fda;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+      .header h2 {
+        margin: 5px 0 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+      }
 
-        .header .right {
-            width: 65%;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            margin-right: 40px;
-        }
+      .SUsection {
+        padding-top: 10px;
+        padding-left: 8px;
+      }
 
-        .header .right .head {
-            padding-left: 40px;
-        }
+      .section,
+      .SUsection {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #000000;
+      }
 
-        .textGray {
-            color: #4e4e53;
-        }
+      .content .left {
+        margin-top: 20px;
+      }
 
-        .right h1 {
-            font-size: 40px;
-            margin-bottom: 5px;
-        }
+      .rotate-90 {
+        transform: rotate(90deg);
+      }
 
-        .right h2 {
-            font-size: 16px;
-            color: #4d4b4b;
-        }
+      .Contact div {
+        margin-bottom: 4px;
+        margin-left: 8px;
+      }
 
-        .section-title {
-            font-size: 18px;
-            color: #3e3e3f;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #96a75a;
-            padding-bottom: 5px;
-        }
+      .Contact {
+        width: 33%;
+      }
 
-        .SkillsSection-title {
-            font-size: 18px;
-            color: #3e3e3f;
-            border-bottom: 1px solid #96a75a;
-        }
+      .Contact,
+      .Usection {
+        padding-top: 20px;
+      }
 
-        .Lsection-title {
-            font-size: 18px;
-            color: #f5f5f5;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #d4d4d2;
-            padding-bottom: 5px;
-        }
+      .NoneDecorationBlack a {
+        text-decoration: none;
+        color: #000000;
+      }
 
-        .content {
-            display: flex;
-            justify-content: center;
-        }
+      .colorBlue {
+        color: #277ca3;
+      }
 
-        .mtt-3 {
-            margin-top: 0.75rem
-                /* 12px */
-            ;
-        }
+      .TextLight {
+        /* Used for subheadings of the content & contact fasfonts to make it more classic */
+        color: #333333;
+      }
 
-        .content .left {
-            width: 35%;
-            padding-right: 10px;
-            background-color: #0363b1;
-            border-bottom-left-radius: 15px;
-            border-right: 4px solid #0363b1;
-            /* border-top: 4px solid #0363b1; */
-        }
+      .NoneDecoration a {
+        /* Used in More Certificates to remove text decoration but add blue color to make it Easy to understand */
+        text-decoration: none;
+        color: #277ca3;
+      }
 
-        .content .right {
-            width: 65%;
-            margin-left: 10px;
-        }
+      .subcont,
+      .SkillSubCon {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .Lsection,
-        .Contact {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            color: #e1ebf3;
-        }
+      .section-title {
+        font-size: 18px;
+        color: #5e6163;
+        padding: 0 10px 0 10px;
+        margin-bottom: 10px;
+      }
 
-        .Contact div {
-            margin-bottom: 5px;
-        }
+      .section {
+        padding-left: 8px;
+      }
 
-        .content .Contact div a {
-            text-decoration: none;
-            color: #e1ebf3;
-        }
+      .LDsection {
+        padding-left: 8px;
+      }
 
-        .subcont,
-        .SkillSubCon {
-            display: flex;
-            justify-content: space-between;
-        }
+      .content {
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #353333;
+        margin: 0 20px 0 20px;
+      }
 
-        .section,
-        .SUsection {
-            margin-bottom: 20px;
-            color: #141414;
-        }
+      .upperContent {
+        display: flex;
+        justify-content: center;
+        margin: 0 20px 0 20px;
+        border-top: 2px solid #353333;
+        border-bottom: 2px solid #353333;
+      }
 
-        .item {
-            margin-bottom: 10px;
-        }
+      .upperContent .Usection {
+        border-left: 4px solid #5e6163;
+        width: 67%;
+      }
 
-        .item-title {
-            font-weight: bold;
-        }
+      .content .left {
+        width: 33%;
+        height: 100%;
+        border-radius: 2px;
+      }
 
-        .content .right .item-title,
-        .content .left .section-title,
-        .Lsection-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .section-title,
+      .content .right .item-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        ul {
-            list-style-type: circle;
-            padding-left: 20px;
-            margin: 5px 0;
-        }
+      .content .right {
+        width: 67%;
+        height: 100%;
+        border-left: 4px solid rgb(109, 106, 106);
+      }
 
-        ul li {
-            margin-bottom: 5px;
-        }
+      .Litem {
+        margin-bottom: 10px;
+        padding-right: 20px;
+      }
 
-        .textLight {
-            font-weight: 500;
-            color: #626263;
-        }
+      .Ritem {
+        margin-bottom: 10px;
+        padding-left: 10px;
+      }
 
-        .rotate-90 {
-            transform: rotate(90deg);
-        }
+      .item-title {
+        font-weight: bold;
+      }
 
-        .content .right .section .Cont {
-            border-left: 2px solid #53677a;
-            margin-left: 5px;
-        }
+      .fontLight {
+        /* font-weight: bold; */
+        color: #5f5f5f;
+      }
 
-        .content .right .section .Cont .item {
-            margin-left: 10px;
-        }
+      ul {
+        list-style: circle;
+        padding-left: 20px;
+        margin: 5px 0;
+      }
+
+      ul li {
+        margin-bottom: 5px;
+      }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="#">
-</head>
+    <link
+      rel="stylesheet"
+      href="#"
+    />
+    <link rel="icon" href="" />
+  </head>
 
-<body>
-  <div class="sc-dycHyt fNOEuN">
-    <div class="resume" id="capture-content">
-      <div class="header">
-        <div class="left">
-          <img src="https://www.skibalawchicago.com/wp-content/uploads/2024/06/profile-placeholder.jpg" alt="Profile">
+  <body>
+    <div class="sc-gjcoXW iFSzMt">
+      <div class="resume" id="capture-content">
+        <div class="header">
+          <h1>Nishant Sonar</h1>
+          <h2>Full Stack Web Developer</h2>
         </div>
-        <div class="right">
-          <div class="head">
-            <h1>Nishant Sonar</h1>
-            <h2>Full Stack Web Developer</h2>
-            <div class="Underline"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content">
-        <div class="left">
+        <div class="upperContent">
           <div class="Contact">
-            <div class="Lsection-title"><b>Contact</b> <i class="fas fa-address-card"></i></div><br>
-            <div class="Litem"><i class="fa fa-phone"></i> 9970135444</div>
-            <div class="Litem"><i class="fas fa-envelope"></i><a href="mailto:nishantsonar047@gmail.com"> nishantsonar047@gmail.com</a></div>
-            <div class="Litem"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/NishatSonar/" target="_blank"> NishantSonar</a></div>
-            <div class="Litem"><i class="fas fa-globe"></i><a href="https://nishanttech.host20.uk" target="_blank"> nishanttech.host20.uk </a></div>
-            <div class="Litem"><i class="fa fa-map-marker"></i> Nagpur (Maharashtra)</div>
-          </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Education </b><i class="fas fa-graduation-cap"></i></div><br>
-            <div class="Litem">
-              <div class="SubSec-title"><b>2021 - 2025<br>Nagpur University</b></div>Bachelor in Technology <br>CGPA: 8.5<br><br>
-              <div class="SubSec-title"><b>2020 - 2021<br>MPK Jr.College Nagpur</b></div>Primary/Secondary <br>Percentage: 84.33<br>
+            <div class="section-title">
+              <b>Contact</b>
+              <i class="fas fa-address-card" aria-hidden="true"></i>
             </div>
+            <div class="Litem">
+              <i class="fa fa-phone TextLight" aria-hidden="true"></i>
+              9970135444
+            </div>
+            <div class="Litem NoneDecorationBlack">
+              <i class="fas fa-envelope TextLight" aria-hidden="true"></i>
+              <a href="mailto:nishantsonar047@gmail.com"
+                >nishantsonar047@gmail.com</a
+              >
+            </div>
+            <div class="Litem NoneDecorationBlack">
+              <i class="fab fa-linkedin TextLight" aria-hidden="true"></i>
+              <a
+                href="https://www.linkedin.com/in/NishatSonar/"
+                target="_blank"
+                rel="noreferrer"
+                >NishantSonar</a
+              >
+            </div>
+            <div class="Litem NoneDecorationBlack">
+              <i class="fas fa-globe TextLight" aria-hidden="true"></i>
+              <a
+                href="https://nishanttech.host20.uk"
+                target="_blank"
+                rel="noreferrer"
+                >nishanttech.host20.uk</a
+              >
+            </div>
+            <div class="Litem">
+              <i class="fa fa-map-marker TextLight" aria-hidden="true"></i>
+              Nagpur (Maharashtra)
+            </div>
+            <br />
           </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Soft Skills </b><i class="fa fa-book"></i></div><br>
-            <ul>
-              <li>Team Collaboration</li>
-              <li>Problem Solving</li>
-              <li>Adaptability</li>
-              <li>Critical Thinking</li>
-              <li>Effective Communication</li>
-              <li>Time Management</li>
-            </ul>
-          </div>
-
-          <div class="Lsection">
-            <div class="Lsection-title"><b>Languages </b><i class="fa fa-language"></i></div><br>
-            <ul>
-              <li>English: Fluent</li>
-              <li>Hindi: Fluent</li>
-              <li>Marathi: Fluent</li>
-            </ul>
+          <div class="Usection">
+            <div class="section-title"><b>Profile Summary</b></div>
+            <div class="Litem">
+              <p class="Ritem">
+                Self-motivated Full Stack Web Developer skilled in creating
+                scalable applications using React, Node.js, Express.js, and
+                MongoDB. Passionate about clean code, API integration, and
+                responsive UI. Hands-on with live projects, RESTful APIs, and
+                authentication systems. Always ready to learn and adapt in
+                fast-paced environments.
+              </p>
+            </div>
           </div>
         </div>
-
-        <div class="right">
-          <div class="section">
-            <div class="section-title"><b>Profile Summary</b></div>
-            <p>Self-motivated Full Stack Web Developer skilled in creating scalable applications using React, Node.js, Express.js, and MongoDB. Passionate about clean code, API integration, and responsive UI. Hands-on with live projects, RESTful APIs, and authentication systems. Always ready to learn and adapt in fast-paced environments.</p>
+        <div class="content">
+          <div class="left">
+            <div class="SUsection">
+              <div class="section-title">
+                <b>Education </b
+                ><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div>
+                <div class="TextLight">
+                  <b>2021 - 2025<br />Nagpur University</b>
+                </div>
+                Bachelor in Technology <br />CGPA: 8.5<br />
+                <br />
+              </div>
+              <div>
+                <div class="TextLight">
+                  <b>2020 - 2021<br />MPK Jr.College Nagpur</b>
+                </div>
+                Primary/Secondary <br />Percentage: 84.33 <br />
+                <br />
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">
+                <b>Soft Skills </b><i class="fa fa-book" aria-hidden="true"></i>
+              </div>
+              <ul>
+                <li>Team Collaboration</li>
+                <li>Problem Solving</li>
+                <li>Adaptability</li>
+                <li>Critical Thinking</li>
+                <li>Effective Communication</li>
+                <li>Time Management</li>
+                <br />
+              </ul>
+            </div>
+            <div class="LDsection">
+              <div class="section-title">
+                <b>Languages </b
+                ><i class="fa fa-language" aria-hidden="true"></i>
+              </div>
+              <ul>
+                <li>English: Fluent</li>
+                <li>Hindi: Fluent</li>
+                <li>Marathi: Fluent</li>
+              </ul>
+            </div>
           </div>
-
-          <div class="SUsection">
-            <div class="section-title"><b>Projects</b></div>
-            <ul>
-              <div class="Ritem" style="margin-bottom: 15px;">
-                <li>
-                  <div class="item-title textGray">Task Management System</div>
-                  <div>React, Node.js, MongoDB – Developed a full-stack task management app with user authentication and REST APIs.</div>
-                </li>
-              </div>
-              <div class="Ritem" style="margin-bottom: 15px;">
-                <li>
-                  <div class="item-title textGray">Student Management App</div>
-                  <div>Ionic Angular – Built a CRUD-based app to manage student records with real-time updates and API integration.</div>
-                </li>
-              </div>
+          <div class="right">
+            <div class="SUsection">
+              <div class="section-title"><b>Projects</b></div>
+              <ul>
+                <div class="Ritem">
+                  <li>
+                    <div class="item-title TextLight">
+                      Task Management System
+                    </div>
+                    <div>
+                      React, Node.js, MongoDB – Developed a full-stack task
+                      management app with user authentication and REST APIs.
+                    </div>
+                  </li>
+                </div>
+                <div class="Ritem">
+                  <li>
+                    <div class="item-title TextLight">
+                      Student Management App
+                    </div>
+                    <div>
+                      Ionic Angular – Built a CRUD-based app to manage student
+                      records with real-time updates and API integration.
+                    </div>
+                  </li>
+                </div>
+                <div class="Ritem">
+                  <li>
+                    <div class="item-title TextLight">
+                      Super Cop Application
+                    </div>
+                    <div>
+                      Ionic + REST APIs – Android/web app for FIR, case
+                      handling, and duty management for citizens and police
+                      officers.
+                    </div>
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="section">
+              <div class="section-title"><b>Work Experience</b></div>
               <div class="Ritem">
-                <li>
-                  <div class="item-title textGray">Super Cop Application</div>
-                  <div>Ionic + REST APIs – Android/web app for FIR, case handling, and duty management for citizens and police officers.</div>
-                </li>
+                <ul>
+                  <li>
+                    <div class="item-title TextLight">
+                      Onlei Tech
+                      <div>Dec-2024 to Mar-2025</div>
+                    </div>
+                    (Full Stack Developer Intern) <br />Developed and deployed
+                    full-stack applications using React, Node.js, and MongoDB.
+                    Worked on REST APIs and authentication logic.<br /><br />
+                  </li>
+                  <li>
+                    <div class="item-title TextLight">
+                      Live Project Contributor
+                      <div>Aug-2024 to Dec-2024</div>
+                    </div>
+                    Worked on the frontend of a real-time Police Patrol app.
+                    Integrated APIs and improved responsiveness using Ionic
+                    Angular.<br />
+                  </li>
+                </ul>
               </div>
-            </ul>
-          </div><br>
-
-          <div class="section">
-            <div class="section-title"><b>Work Experience</b></div>
-            <div class="Ritem">
-              <ul>
-                <li>
-                  <div class="item-title textGray mtt-3">Onlei Tech<div>Dec-2024 to Mar-2025</div></div>
-                  Full Stack Developer Intern<br>
-                  <div>Developed and deployed full-stack applications using React, Node.js, and MongoDB. Worked on REST APIs and authentication logic.</div>
-                </li>
-                <li>
-                  <div class="item-title textGray mtt-3">Live Project Contributor<div>Aug-2024 to Dec-2024</div></div>
-                  Frontend Developer<br>
-                  <div>Worked on the frontend of a real-time Police Patrol app. Integrated APIs and improved responsiveness using Ionic Angular.</div>
-                </li>
-              </ul>
             </div>
-          </div>
-
-          <div class="section">
-            <div class="section-title"><b>Certificates</b></div>
-            <div class="Ritem subcont NoneDecoration">
-              <div>
-                Best Coder - Technophilia<br>Frontend Development with React<br>MongoDB Basics<br>REST API Integration<br>Git & GitHub Essentials<br><a href="#">More Certificates</a>
+            <div class="section">
+              <div class="section-title"><b>Certificates</b></div>
+              <div class="Ritem subcont NoneDecoration">
+                <div>
+                  Best Coder - Technophilia<br />Frontend Development with
+                  React<br />MongoDB Basics<br />REST API Integration<br />Git &
+                  GitHub Essentials<br /><a
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    >More Certificates</a
+                  >
+                </div>
+                <div>--<br />--<br />--<br />--<br />--<br /></div>
+                <div>
+                  Championship (2022)<br />Coursera<br />MongoDB University<br />Udemy<br />GitHub
+                  Campus<br />
+                </div>
+                <div class="fontLight">
+                  (Winner)<br />(2 Month)<br />(1 Month)<br />(1 Month)<br />(2
+                  Weeks)<br />
+                </div>
               </div>
-              <div>--<br>--<br>--<br>--<br>--</div>
-              <div>
-                Championship (2022)<br>Coursera<br>MongoDB University<br>Udemy<br>GitHub Campus
-              </div>
-              <div class="textLight">(Winner)<br>(2 Month)<br>(1 Month)<br>(1 Month)<br>(2 Weeks)</div>
             </div>
-          </div>
-
-          <div class="skills">
-            <div class="SkillsSection-title"><b>Technical Skills</b></div><br>
-            <div class="Ritem subcont">
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-              </ul>
-              <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-              </ul>
-              <ul>
-                <li>MongoDB</li>
-                <li>Ionic Angular</li>
-                <li>REST APIs</li>
-              </ul>
-              <ul>
-                <li>Git/GitHub</li>
-                <li>VS Code</li>
-                <li>Responsive Design</li>
-              </ul>
+            <div class="skills">
+              <div class="section-title"><b>Technical Skills</b></div>
+              <div class="Ritem subcont">
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+                <ul>
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                </ul>
+                <ul>
+                  <li>MongoDB</li>
+                  <li>Ionic Angular</li>
+                  <li>REST APIs</li>
+                </ul>
+                <ul>
+                  <li>Git/GitHub</li>
+                  <li>VS Code</li>
+                  <li>Responsive Design</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
