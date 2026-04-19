@@ -1,11 +1,11 @@
 # CV Templates - AI-Powered Resume Builder
 
-This repository contains a collection of clean, modern, and **ATS-friendly resume templates** crafted in pure HTML and CSS. These templates are designed to seamlessly integrate with my project [**AI-Powered Resume Builder**](https://prashantparshuramkar.host20.uk/Resume-builder/) — a tool that helps users create polished resumes easily.
+This repository contains a collection of clean, modern, and **ATS-friendly resume templates** crafted in pure HTML and CSS. These templates are designed to seamlessly integrate with my project [**AI-Powered Resume Builder**](https://resume.zapsas.info/) — a tool that helps users create polished resumes easily.
 
 ---
 
 ## 🌟 Live Resume Builder Demo
-👉 [Click here to use the Resume Builder](https://prashantparshuramkar.host20.uk/Resume-builder/)
+👉 [Click here to use the Resume Builder].(https://resume.zapsas.info/)
 
 ---
 
